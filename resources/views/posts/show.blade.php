@@ -9,7 +9,7 @@
 
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
             {{--Contenido principal--}}
-            <div class="lg:col-span-2">
+            <div class="lg:col-span-3">
                 <figure>
                     @if ($post->image)
                         <img class="w-full h-80 object-cover object-center" src="{{Storage::url($post->image->url)}}" alt="">
