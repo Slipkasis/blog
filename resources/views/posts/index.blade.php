@@ -1,11 +1,11 @@
 <x-app-layout>
     <div class="container py-8 ">
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="py-8 gap-6">
 
             @foreach ($posts as $post)
-                <article class="w-full h-80 bg-auto bg-center @if($loop->first) md:col-span-2 @endif" style="background-image: url(@if($post->image) {{Storage::url($post->image->url)}} @else https://cdn.pixabay.com/photo/2021/05/29/07/06/shiba-6292660_960_720.jpg @endif)">
-                    <div class="w-full h-full px-8 flex-col justify-center">
+                <article class=" mx-8 @if($loop->first) @endif" style="background-image: url(@if($post->image) {{Storage::url($post->image->url)}} @else https://cdn.pixabay.com/photo/2021/05/29/07/06/shiba-6292660_960_720.jpg @endif)">
+                    <div class="w-full h-full py-8 px-8 my-8 flex-col justify-center">
 
                         <div>
                             @foreach ($post->tags as $tag)

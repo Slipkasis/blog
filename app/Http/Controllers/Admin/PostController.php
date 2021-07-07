@@ -61,7 +61,7 @@ class PostController extends Controller
         }
 
         if($request->tags){
-            $post->tags()->sync($request->tags);
+            $post->tags()->attach($request->tags);
         }
 
         return redirect()->route('admin.posts.edit', $post); 
@@ -110,7 +110,7 @@ class PostController extends Controller
         $post->update($request->all());
 
         if ($request->file('file')) {
-            $url = Storage::put('posts', $request->file('file'));
+            $url = Storage::put('public/posts', $request->file('file'));
 
             if ($post->image) {
                 Storage::delete($post->image->url);
