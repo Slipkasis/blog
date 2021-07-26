@@ -3,9 +3,14 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 
+Route::view('/', 'nosotros');
+Route::view('/nosotros', 'nosotros');
+Route::view('/servicios', 'servicios');
+Route::view('/proyectos', 'proyectos');
+Route::view('/contacto', 'contacto');
+Route::get('/productos',);
 
-
-Route::get('/', [PostController::class, 'index'])->name('posts.index');
+Route::get('/blog', [PostController::class, 'index'])->name('posts.index');
 
 Route::get('posts/{post}', [PostController::class, 'show'])->name('posts.show');
 

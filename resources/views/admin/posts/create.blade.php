@@ -64,6 +64,18 @@
             console.error( error );
         } );
 
+        /* ClassicEditor
+	    .create( document.querySelector( '#body' ), {
+		ckfinder: {
+			uploadUrl: '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files&responseType=json',
+		},
+		toolbar: [ 'ckfinder', 'imageUpload', '|', 'heading', '|', 'bold', 'italic', '|', 'undo', 'redo.' ]
+	    } )
+	    .catch( error => {
+		console.error( error );
+	    } ); */
+
+
         //Previsualizar Imagen
         document.getElementById("file").addEventListener('change', cambiarImagen);
 
