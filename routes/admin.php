@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\TagController;
 use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Admin\PanelController;
 
 Route::get('', [HomeController::class, 'index'])->name('admin.home');
 
@@ -18,3 +19,5 @@ Route::resource('tags', 'UserController');
 Route::resource('tags', TagController::class)->names('admin.tags');
 
 Route::resource('posts', PostController::class)->names('admin.posts');
+
+Route::resource('panels', PanelController::class)->names('admin.panels');

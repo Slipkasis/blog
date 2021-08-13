@@ -45,7 +45,7 @@ return [
     |
     */
 
-    'logo' => '<b>SOLARIUM</b>',
+    'logo' => '<b>EEIS</b>',
     'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
@@ -281,8 +281,28 @@ return [
             'route'        => 'admin.posts.create',
             'icon'       => 'fas fa-fw fa-file',
         ],
+        ['header' => 'Servicios EEIS'],
+        [
+            'text' => 'Paneles',
+            'route'  => 'admin.panels.index',
+            'icon' => 'fas fa-solar-panel',
+            'active' =>['admin/panels*'],
+        ],
+        [
+            'text' => 'Inversores',
+            'route'  => 'admin.tags.index',
+            'icon' => 'fas fa-charging-station',
+            'active' =>['admin/tags*'],
+        ],
+        [
+            'text' => 'Proveedores',
+            'route'  => 'admin.tags.index',
+            'icon' => 'fas fa-people-carry',
+            'active' =>['admin/tags*'],
+        ],
         
     ],
+
 
     /*
     |--------------------------------------------------------------------------
